@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/28/mHQKyV.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/29/mqaudA.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/29/mq6fkF.png">
-<meta property="og:updated_time" content="2019-08-29T11:05:51.766Z">
+<meta property="og:updated_time" content="2019-08-29T11:41:24.837Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo yilia 主题添加相册功能">
 <meta name="twitter:description" content="当我们使用hexo博客框架中的yilia主题时，在我们这一博客页面中，原作者Litten并未帮我们添加相册这一功能。这时，如果想让我们的博客拥有相册的功能，就需要我们自行添加改变、添加主题中的相关参数。从网上百度了很多，看了许多的博客，还是遇到了一些坑爬不过去。最终，还是请教了一个小伙伴才得以解决。 一、博客页面添加相册首先，打开cmd进入blog的source目录下，创建photos文件夹。 1">
@@ -97,7 +97,7 @@
 			</div>
 		</nav>
 		<!-- 文章总字数
-		<span class="post-count">1.8k</span> -->
+		<span class="post-count">1.9k</span> -->
 	</header>		
 </div>
 
@@ -188,7 +188,7 @@
     
         
     <div align="left" class="post-count">
-      <font size='2' face='Microsoft YaHei' color='#999'><i class="fa fa-wordpress" aria-hidden="true" style="color: #00f"></i> 字数：1.8k字  |  <i class="fa fa-clock-o" aria-hidden="true" style="color: #ee5c42"></i> 预计阅读时长：7分钟</font>
+      <font size='2' face='Microsoft YaHei' color='#999'><i class="fa fa-wordpress" aria-hidden="true" style="color: #00f"></i> 字数：1.9k字  |  <i class="fa fa-clock-o" aria-hidden="true" style="color: #ee5c42"></i> 预计阅读时长：7分钟</font>
     </div>
         
       </header>
@@ -222,7 +222,12 @@
 <ol>
 <li>将其中的.py文件拷贝至本地仓库blog-Picture文件夹中.</li>
 <li>根据脚本文件，图片的命名规则为：2019-10-21_xxx.jpg/png.</li>
+<li>将图片<a href="https://github.com/ChemLez/ChemLez.github.io/blob/master/assets/img/empty.png" target="_blank" rel="noopener">empty.png</a>下载放入博客目录下的assets/img文件夹中.</li>
+<li>打开tool.py文件,修改def handle_photo():<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">with open(&quot;E:/blog/source/photos/data.json&quot;, &quot;w&quot;) as fp:</span><br></pre></td></tr></table></figure>
+
+</li>
 </ol>
+<p>将其中的的地址，换成你将要生成data.json的位置，就是在第一步中，我们删除的.jaso文件夹的目录地址。每次，进行tool.py脚本时，都会产生data.json文件，用于存储我们图片的信息。</p>
 <h2 id="五、运行"><a href="#五、运行" class="headerlink" title="五、运行"></a>五、运行</h2><p>1.首先将用于测试的图片名改成上述的命名规则的名字,推送至github远端，进行修改.<br>2.打开终端命令窗口cmd.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：</span><br><span class="line">cd blog-Picture //用于进入blog-Picture文件夹</span><br><span class="line">python tool.py //python脚本文件的运行</span><br><span class="line">第二句的运行这里可能会报错 `no module named PIL`</span><br><span class="line">然后输入：</span><br><span class="line">pip install pillow</span><br><span class="line">可能出现权限不足的情况，按照下方出现的英文，加上权限进行下载。即：一路按照下方的英文,加权限进行下载.</span><br></pre></td></tr></table></figure>
 
@@ -234,8 +239,8 @@
 
 <h2 id="六、总结"><a href="#六、总结" class="headerlink" title="六、总结"></a>六、总结</h2><ol>
 <li>每次将需要上传的图片，放入到blog-Picture中的photos文件夹.图片的命名一定要遵循上述说的命名规则.</li>
-<li>将图片推送到github远端仓库，产生链接.</li>
 <li>cmd命令窗口进入blog-Picture,再进行python tool.py，运行脚本.</li>
+<li>将图片推送到github远端仓库，产生链接.</li>
 <li>hexo s 进入本地窗口预览，没有问题后：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean //清除页面缓存</span><br><span class="line">hexo g //用于生成改动的文件</span><br><span class="line">hexo d //部署到远端网站</span><br></pre></td></tr></table></figure>
 
 </li>
@@ -552,11 +557,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>
