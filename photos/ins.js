@@ -112,8 +112,8 @@
     };
 
 	// 修改这里render()函数：修改图片的路径地址.minSrc 小图的路径. src 大图的路径.修改为自己的图片路径(github的路径)
-	// https://raw.githubusercontent.com/yansheng836/yansheng836.github.io/blog/photos-source/photos/
-	// https://raw.githubusercontent.com/yansheng836/yansheng836.github.io/blog/photos-source/min_photos/
+	// https://raw.githubusercontent.com/ChemLez/blog-Picture/master/photos/
+	// https://raw.githubusercontent.com/ChemLez/blog-Picture/master/min_photos/
     var render = function render(res) {
       var ulTmpl = "";
       for (var j = 0, len2 = res.list.length; j < len2; j++) {

@@ -8,14 +8,22 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>hexo yilia 主题添加相册功能 | Liz&#39;blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="当我们使用hexo博客框架中的yilia主题时，在我们这一博客页面中，原作者Litten并未帮我们添加相册这一功能。这时，如果想让我们的博客拥有相册的功能，就需要我们自行添加改变、添加主题中的相关参数。从网上百度了很多，看了许多的博客博客，还是遇到了一些坑爬不过去。最终，还是请教了一个小伙伴才得以解决。 一、博客页面添加相册首先，打开cmd进入blog的source目录下，创建photos文件夹。">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
 <meta property="og:title" content="hexo yilia 主题添加相册功能">
 <meta property="og:url" content="http://yoursite.com/2019/08/28/hexo-yilia-主题添加相册功能/index.html">
 <meta property="og:site_name" content="Liz&#39;blog">
+<meta property="og:description" content="当我们使用hexo博客框架中的yilia主题时，在我们这一博客页面中，原作者Litten并未帮我们添加相册这一功能。这时，如果想让我们的博客拥有相册的功能，就需要我们自行添加改变、添加主题中的相关参数。从网上百度了很多，看了许多的博客博客，还是遇到了一些坑爬不过去。最终，还是请教了一个小伙伴才得以解决。 一、博客页面添加相册首先，打开cmd进入blog的source目录下，创建photos文件夹。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-28T12:02:26.539Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/28/mHQKyV.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/29/mqaudA.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/29/mq6fkF.png">
+<meta property="og:updated_time" content="2019-08-29T11:02:45.659Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo yilia 主题添加相册功能">
+<meta name="twitter:description" content="当我们使用hexo博客框架中的yilia主题时，在我们这一博客页面中，原作者Litten并未帮我们添加相册这一功能。这时，如果想让我们的博客拥有相册的功能，就需要我们自行添加改变、添加主题中的相关参数。从网上百度了很多，看了许多的博客博客，还是遇到了一些坑爬不过去。最终，还是请教了一个小伙伴才得以解决。 一、博客页面添加相册首先，打开cmd进入blog的source目录下，创建photos文件夹。">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/08/28/mHQKyV.png">
   
     <link rel="alternative" href="/atom.xml" title="Liz&#39;blog" type="application/atom+xml">
   
@@ -89,7 +97,7 @@
 			</div>
 		</nav>
 		<!-- 文章总字数
-		<span class="post-count">0</span> -->
+		<span class="post-count">1.8k</span> -->
 	</header>		
 </div>
 
@@ -180,14 +188,61 @@
     
         
     <div align="left" class="post-count">
-      <font size='2' face='Microsoft YaHei' color='#999'><i class="fa fa-wordpress" aria-hidden="true" style="color: #00f"></i> 字数：0字  |  <i class="fa fa-clock-o" aria-hidden="true" style="color: #ee5c42"></i> 预计阅读时长：1分钟</font>
+      <font size='2' face='Microsoft YaHei' color='#999'><i class="fa fa-wordpress" aria-hidden="true" style="color: #00f"></i> 字数：1.8k字  |  <i class="fa fa-clock-o" aria-hidden="true" style="color: #ee5c42"></i> 预计阅读时长：7分钟</font>
     </div>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>当我们使用hexo博客框架中的yilia主题时，在我们这一博客页面中，原作者Litten并未帮我们添加相册这一功能。这时，如果想让我们的博客拥有相册的功能，就需要我们自行添加改变、添加主题中的相关参数。从网上百度了很多，看了许多的博客博客，还是遇到了一些坑爬不过去。最终，还是请教了一个小伙伴才得以解决。</p>
+<h2 id="一、博客页面添加相册"><a href="#一、博客页面添加相册" class="headerlink" title="一、博客页面添加相册"></a>一、博客页面添加相册</h2><p>首先，打开cmd进入blog的source目录下，创建photos文件夹。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">E:\&gt;cd blog</span><br><span class="line">E:\blog&gt;cd source</span><br><span class="line">E:\blog\source&gt;hexo new page &quot;photos&quot;</span><br><span class="line">INFO  Created: E:\blog\source\photos\index.md</span><br></pre></td></tr></table></figure>
+
+<p>删除文件夹中的index.md文件，否则最终生成的是一个单纯的页面。也可以直接进入source文件下创建photos文件夹。</p>
+<a id="more"></a>
+
+<h2 id="二、创建图片存储仓库"><a href="#二、创建图片存储仓库" class="headerlink" title="二、创建图片存储仓库"></a>二、创建图片存储仓库</h2><p>因为，我们的博客是部署到远端，使得每一个人都能够看到，而图片在远端的展示，可借助于图床。所以，我们可以专门在github上创建一个仓库用于存储图片。这里仓库的创建就不再一一赘述，只需登录自己的github，new repository即可。这里，我的仓库名为blog-Picture.<br><img src="https://s2.ax1x.com/2019/08/28/mHQKyV.png" alt="个人仓库"><br>在创建完远端仓库后，将本地与github上远端仓库关联，这样我们以后才能够将图片推送到远端。<br>远端仓库与本地仓库关联的方法:<br>打开博客文件夹，在此根目录下，使用git ,即 git Bush Here,然后输入</p>
+<blockquote>
+<p>$ git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:chemlez/picture-blog.git</p>
+</blockquote>
+<p>其中clone的仓库换成自己的仓库地址。这样便能使本地与远端关联起立。此刻，会产生一个blog-Picture的文件夹，在此文件夹下分别创建min_photos、photos文件夹。其中，在此photos文件夹下存入一张图片，再将整个内容推送至远端。</p>
+<blockquote>
+<p>$ git add .<br>$ git commit -m “照片存放”<br>$ git push -u origin master </p>
+</blockquote>
+<p>这个时候本地的内容就被推送到了远端。关于git推送远端的用法，可参照<a href="https://www.liaoxuefeng.com/wiki/896043488029600/898732864121440" target="_blank" rel="noopener">廖雪峰的教程</a>。这样后面我们可以用来查看后面图片的存入地址，来修改我们的ins.js参数。</p>
+<h2 id="三、创建相册布局样式"><a href="#三、创建相册布局样式" class="headerlink" title="三、创建相册布局样式"></a>三、创建相册布局样式</h2><p>在一开始的博客主题clone中，主题yilia并没有相册的版块。但作者<a href="http://litten.me/" target="_blank" rel="noopener">Litten</a>的博客样式中添加了这一版块。所以，我们可以参照原作者的格式进行相关的修改即可。其中的样式参照这里–<a href="https://github.com/ChemLez/ChemLez.github.io/tree/master/photos" target="_blank" rel="noopener">样式参考</a>。下载完之后：<br>1.删除其中所有的.jason文件。因为，后面的.jaso文件是我们自己博客在上传图片时生成的.<br>2.修改index.ejs。这一步很重要，我自己查百度和相关博文时，都没有提到这一步。将其中的href修改成自己的博客地址。当初我就没有修改，最终，显示出来的永远都是原作者Litten的相册.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   &lt;div class=&quot;instagram itemscope&quot;&gt;</span><br><span class="line">	&lt;a href=&quot;https://chemlez.github.io/&quot; target=&quot;_blank&quot; class=&quot;open-ins&quot;&gt;图片正在加载中…&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3.修改ins.js文件里的render()函数，按照上面的注释提醒，进行修改。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 修改这里render()函数：修改图片的路径地址.minSrc 小图的路径. src 大图的路径.修改为自己的图片路径(github的路径)</span><br><span class="line">	// https://raw.githubusercontent.com/ChemLez/blog-Picture/master/photos/</span><br><span class="line">	// https://raw.githubusercontent.com/ChemLez/blog-Picture/master/min_photos/</span><br><span class="line">    var render = function render(res) &#123;</span><br><span class="line">      var ulTmpl = &quot;&quot;;</span><br><span class="line">      for (var j = 0, len2 = res.list.length; j &lt; len2; j++) &#123;</span><br><span class="line">        var data = res.list[j].arr;</span><br><span class="line">        var liTmpl = &quot;&quot;;</span><br><span class="line">        for (var i = 0, len = data.link.length; i &lt; len; i++) &#123;</span><br><span class="line">          var minSrc = &apos;https://raw.githubusercontent.com/ChemLez/blog-Picture/master/min_photos/&apos; + data.link[i];</span><br><span class="line">          var src = &apos;https://raw.githubusercontent.com/ChemLez/blog-Picture/master/photos/&apos; + data.link[i];</span><br><span class="line">          var type = data.type[i];</span><br><span class="line">          var target = src + (type === &apos;video&apos; ? &apos;.mp4&apos; : &apos;.jpg&apos;);</span><br><span class="line">          src += &apos;&apos;;</span><br></pre></td></tr></table></figure>
+
+<p>这里的地址，就可以查看我们第二步所做的工作。打开github，进入blog-Picture仓库后。点击在第二步中上传的照片。<img src="https://s2.ax1x.com/2019/08/29/mqaudA.png" alt="图片">然后点击Download，此时的浏览框中的地址就是我们所需要的地址。</p>
+<h2 id="四、添加脚本"><a href="#四、添加脚本" class="headerlink" title="四、添加脚本"></a>四、添加脚本</h2><p>这里添加的python脚本主要是用于处理图片。脚本下载-<a href="https://github.com/ChemLez/blog-Picture" target="_blank" rel="noopener">下载地址</a>.<br>因为，当我们点击相册这一页面时，展示在眼前的是一张张缩略图。而当你需要预览具体的某一张图时，其显示的是一张大图。所以，我们的预览图照片大小是经过压缩处理的（使得页面加载快）。当我们具体看某张图片时，再使用原画质的图片。所以，min_photos和photos两个文件夹分别对应着这两种图片。其中，min_photos就是处理过后的压缩图片，而photos就是我们存放的图片。所以，这里的python脚本主要就做着这样的工作。</p>
+<ol>
+<li>将其中的.py文件拷贝至本地仓库blog-Picture文件夹中.</li>
+<li>根据脚本文件，图片的命名规则为：2019-10-21_xxx.jpg/png.</li>
+</ol>
+<h2 id="五、运行"><a href="#五、运行" class="headerlink" title="五、运行"></a>五、运行</h2><p>1.首先将用于测试的图片名改成上述的命名规则的名字,推送至github远端，进行修改.<br>2.打开终端命令窗口cmd.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：</span><br><span class="line">cd blog-Picture //用于进入blog-Picture文件夹</span><br><span class="line">python tool.py //python脚本文件的运行</span><br><span class="line">第二句的运行这里可能会报错 `no module named PIL`</span><br><span class="line">然后输入：</span><br><span class="line">pip install pillow</span><br><span class="line">可能出现权限不足的情况，按照下方出现的英文，加上权限进行下载。即：一路按照下方的英文,加权限进行下载.</span><br></pre></td></tr></table></figure>
+
+<p>3.hexo s.预览查看。这里我将video功能隐去了，最初的photos旁边还有一个video功能。<br><img src="https://s2.ax1x.com/2019/08/29/mq6fkF.png" alt><br>4.在最初的photos下载中，有个videos.ejs文件，如果想引入一些视频，可将其中的链接即src，视频名进行修改.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;center&gt;</span><br><span class="line">    &lt;h1&gt;指弹_女儿情&lt;/h1&gt;</span><br><span class="line">&lt;/center&gt;</span><br><span class="line">&lt;hr/&gt;</span><br><span class="line">&lt;center&gt;</span><br><span class="line">    &lt;div class=&quot;video-container&quot;&gt;</span><br><span class="line">        &lt;iframe height=&quot;80%&quot; width=&quot;80%&quot; src=&quot;https://player.youku.com/embed/XMjUzMzY4OTM3Ng==&quot; frameborder=0 allowfullscreen&gt;&lt;/iframe&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/center&gt;</span><br><span class="line">&lt;hr/&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果不想用这一功能，将以下标签注释.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a class=&quot;photos-btn&quot; href=&quot;/photos/videos.html&quot;&gt;Video&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="六、总结"><a href="#六、总结" class="headerlink" title="六、总结"></a>六、总结</h2><ol>
+<li>每次将需要上传的图片，放入到blog-Picture中的photos文件夹.图片的命名一定要遵循上述说的命名规则.</li>
+<li>将图片推送到github远端仓库，产生链接.</li>
+<li>cmd命令窗口进入blog-Picture,再进行python tool.py，运行脚本.</li>
+<li>hexo s 进入本地窗口预览，没有问题后：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean //清除页面缓存</span><br><span class="line">hexo g //用于生成改动的文件</span><br><span class="line">hexo d //部署到远端网站</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p><a href="https://chemlez.github.io/photos/" target="_blank" rel="noopener">最终效果</a></p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1] hexo Yilia 主题如何添加相册功能:<a href="https://www.jianshu.com/p/a9f309aaa0e0" target="_blank" rel="noopener">https://www.jianshu.com/p/a9f309aaa0e0</a><br>[2] hexo yilia 主题如何添加相册:<a href="https://blog.csdn.net/qq_40651535/article/details/95061281" target="_blank" rel="noopener">https://blog.csdn.net/qq_40651535/article/details/95061281</a><br>[3] Hexo+Github实现相册功能:<a href="http://lawlite.me/2017/04/13/Hexo-Github%E5%AE%9E%E7%8E%B0%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/" target="_blank" rel="noopener">http://lawlite.me/2017/04/13/Hexo-Github%E5%AE%9E%E7%8E%B0%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/</a></p>
+
       
 
       
@@ -226,6 +281,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -309,7 +375,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、博客页面添加相册"><span class="toc-number">1.</span> <span class="toc-text">一、博客页面添加相册</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、创建图片存储仓库"><span class="toc-number">2.</span> <span class="toc-text">二、创建图片存储仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、创建相册布局样式"><span class="toc-number">3.</span> <span class="toc-text">三、创建相册布局样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、添加脚本"><span class="toc-number">4.</span> <span class="toc-text">四、添加脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、运行"><span class="toc-number">5.</span> <span class="toc-text">五、运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、总结"><span class="toc-number">6.</span> <span class="toc-text">六、总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文献"><span class="toc-number">7.</span> <span class="toc-text">参考文献</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -484,6 +550,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
