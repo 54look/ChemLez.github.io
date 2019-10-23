@@ -90,7 +90,7 @@
 			</div>
 		</nav>
 		<!-- 文章总字数
-		<span class="post-count">3.2k</span> -->
+		<span class="post-count">4.4k</span> -->
 	</header>		
 </div>
 
@@ -157,6 +157,98 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-序列之深拷贝-浅拷贝" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/22/序列之深拷贝-浅拷贝/">序列之深拷贝/浅拷贝</a>
+    </h1>
+  
+
+        
+        
+<a href="/2019/10/22/序列之深拷贝-浅拷贝/" class="archive-article-date">
+  	<time datetime="2019-10-22T13:57:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
+</a>
+        
+
+    <!-- // 添加判断，如果首页则不显示访问量 -->
+    
+        
+    <div align="left" class="post-count">
+      <font size='2' face='Microsoft YaHei' color='#999'><i class="fa fa-wordpress" aria-hidden="true" style="color: #00f"></i> 字数：1.2k字  |  <i class="fa fa-clock-o" aria-hidden="true" style="color: #ee5c42"></i> 预计阅读时长：4分钟</font>
+    </div>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在上周的Python科学计算课上，老师讲到了Python序列的浅拷贝以及深拷贝方面的知识，个人觉得说得比较言简意赅了，对于我这个刚入Python的新手来说，也基本可以避免今后变量的赋值使用错乱的问题。</p>
+<p>这里我们简单的将Python中的标准数据类型分为两类：</p>
+<ul>
+<li>不可变数据类型：int、float、string、boolean</li>
+<li>可变（组合）数据类型：列表（list）、字典（dict）、集合(set)</li>
+</ul>
+<p>先举几个例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span> <span class="comment"># a为上述定义的不可变数据类型</span></span><br><span class="line">b = a</span><br><span class="line">print(<span class="string">'b=&#123;&#125;'</span>.format(b)) <span class="comment"># b = 1</span></span><br><span class="line">--------</span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">print(<span class="string">'a = &#123;&#125;,b = &#123;&#125;'</span>.format(a,b)) <span class="comment"># a = 1,b = 2</span></span><br><span class="line"></span><br><span class="line">========</span><br><span class="line"></span><br><span class="line">c = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="comment"># b为上述定义的组合数据类型 </span></span><br><span class="line">d = c</span><br><span class="line">print(<span class="string">'c = &#123;&#125;,d = &#123;&#125;'</span>.format(c,d)) <span class="comment"># c = [1, 2, 3],d = [1, 2, 3]</span></span><br><span class="line">d.append(<span class="number">4</span>) </span><br><span class="line">print(<span class="string">'c = &#123;&#125;,d = &#123;&#125;'</span>.format(c,d)) <span class="comment"># c = [1, 2, 3, 4],d = [1, 2, 3, 4]</span></span><br></pre></td></tr></table></figure>
+
+<p>从上述的例子当中看出，在不可变数据类型中，所定义的变量的值在后来改变（这里是b），并不会引起原来赋给它值的那个量的改变（这里是a）；而在组合数据类型中就发生了改变，我们只是将d的值进行了改变，并没有直接改变c的值，最后c的值却也发生了变化。</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/22/序列之深拷贝-浅拷贝/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-九月校园" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -456,15 +548,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
             
             <div class="clearfix"></div>
